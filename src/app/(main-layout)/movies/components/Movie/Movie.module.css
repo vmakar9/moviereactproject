@@ -7,7 +7,7 @@
 }
 
 .MovieCard {
-    background-color: #f5f5f5;
+    background-color: lightsteelblue;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
@@ -46,5 +46,10 @@
     padding: 5px 10px;
     display: inline-block;
     margin-right: 5px;
+}
+
+.MovieLink{
+    text-decoration: none;
+    color: black;
 }
 

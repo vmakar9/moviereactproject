@@ -1,0 +1,50 @@
+.MovieContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.MovieBlock {
+    background-color: lightsteelblue;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.MovieTitle {
+    color: #333;
+    font-size: 24px;
+    margin: 0;
+}
+
+.MovieOrigTitle {
+    color: #555;
+    font-size: 18px;
+    margin: 0;
+}
+
+.MoviePoster {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Add styles for other elements as needed */
+
+.MovieGenres {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
+
+.blackline{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
