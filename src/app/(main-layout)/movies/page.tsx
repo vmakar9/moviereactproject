@@ -1,9 +1,11 @@
 import Movies from "./components/Movies/Movies"
 
-const Page= async ()=>{
+
+const Page=  ()=>{
     return(<div>
          <Movies/>
     </div>)
 }
+
 
 export default Page

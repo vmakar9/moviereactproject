@@ -4,6 +4,7 @@ import {useEffect} from "react";
 import {movieActions} from "@/redux/slices/movieSlice";
 import Movie from "@/app/(main-layout)/movies/components/Movie/Movie";
 
+
 const Movies=()=>{
     const {movies} = useAppSelector(state => state.movies)
     const dispatch = useAppDispatch()
@@ -14,5 +15,6 @@ const Movies=()=>{
         {movies.map(movie=><Movie movie={movie} key={movie.id}/>)}
     </div>)
 }
+
 
 export default Movies

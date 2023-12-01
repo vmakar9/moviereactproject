@@ -2,16 +2,17 @@ import {FC, PropsWithChildren} from "react";
 import {IMovie} from "@/interfaces/movie.interface";
 import css from "./MovieByGenre.module.css"
 import {urls} from "@/urls/urls";
+import Link from "next/link";
 interface IProps extends PropsWithChildren{
     moviesByGenre:IMovie
 }
 const MovieByGenre:FC<IProps>=({moviesByGenre})=>{
 
-    const {poster_path,title,vote_average,release_date} = moviesByGenre
+    const {id,poster_path,title,release_date} = moviesByGenre
 
 
     return(<div className={css.MovieList}>
-
+        <Link  className={css.MovieLink} href={`/movies/${id}/details`}>
         <div className={css.MovieCard}>
             <img className={css.MovieImage} src={`${urls.photoURL}/${poster_path}`} alt={`${title} poster`}/>
 
@@ -21,6 +22,7 @@ const MovieByGenre:FC<IProps>=({moviesByGenre})=>{
 
 
         </div>
+      </Link>
     </div>)
 }
 

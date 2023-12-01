@@ -5,7 +5,7 @@ interface IProps extends PropsWithChildren{
     params:{id:string}
 }
 
-const Page:FC<IProps>=({params:{id}})=>{
+const Page:FC<IProps>= ({params:{id}})=>{
     return(<div>
        <MoviesByGenre with_genres={id}/>
     </div>)
