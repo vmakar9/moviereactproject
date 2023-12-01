@@ -11,7 +11,7 @@ const urls={
     photoURL,
     details:{
         byId:(id:number|string):string =>`${details}/${id}`
-    }
+    },
 }
 
 export {urls,baseURL}
