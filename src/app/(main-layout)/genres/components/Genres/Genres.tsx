@@ -5,7 +5,7 @@ import {genreActions} from "@/redux/slices/genreSlice";
 import Genre from "@/app/(main-layout)/genres/components/Genre/Genre";
 
 const Genres=()=>{
-    const {genres} = useAppSelector(state => state.genres)
+    const {genres,isLoading} = useAppSelector(state => state.genres)
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -14,6 +14,7 @@ const Genres=()=>{
 
 
     return(<div>
+        {isLoading && <h1>Loading...</h1>}
         {genres.map(genre=><Genre key={genre.id} genre={genre}/>)}
     </div>)
 }

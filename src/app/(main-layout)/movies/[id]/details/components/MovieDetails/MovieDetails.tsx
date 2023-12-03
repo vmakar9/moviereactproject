@@ -9,7 +9,7 @@ interface IProps extends PropsWithChildren{
     id:string
 }
 const MovieDetails:FC<IProps>=({id})=>{
-    const {movieDetails} = useAppSelector(state => state.movies)
+    const {movieDetails,isLoading} = useAppSelector(state => state.movies)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -17,7 +17,8 @@ const MovieDetails:FC<IProps>=({id})=>{
     }, [dispatch]);
 
     return(<div>
-        {movieDetails && <MovieDetail movieDetails={movieDetails}/>}
+        {isLoading && <h1>Loading...</h1>}
+        {!isLoading && movieDetails && <MovieDetail movieDetails={movieDetails}/>}
     </div>)
 }
 

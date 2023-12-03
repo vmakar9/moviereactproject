@@ -10,7 +10,7 @@ interface IProps extends PropsWithChildren{
 
 const MoviesByGenre:FC<IProps>= ({with_genres})=>{
 
-    const {movieByGenre} =useAppSelector(state => state.movies)
+    const {movieByGenre,isLoading} =useAppSelector(state => state.movies)
     const dispatch = useAppDispatch()
 
     useEffect( () => {
@@ -19,7 +19,8 @@ const MoviesByGenre:FC<IProps>= ({with_genres})=>{
 
 
     return(<div>
-        {movieByGenre.map(moviesByGenre=><MovieByGenre key={moviesByGenre.id} moviesByGenre={moviesByGenre}/>)}
+        {isLoading && <h1>Loading...</h1>}
+        {!isLoading && movieByGenre.map(moviesByGenre=><MovieByGenre key={moviesByGenre.id} moviesByGenre={moviesByGenre}/>)}
     </div>)
 }
 
